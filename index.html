@@ -4,27 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roxie Events Co.</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+    
+    <!-- Smooth scrolling -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
-        body {
-            font-family: 'IBM Plex Sans', sans-serif; 
-            text-align: center; /* Center text on the page */
-            background-color: #F5F5F3;
-            background-style:flat;
-            background-type:COLOR;
-        }
-        img {
-            display: block; /* Ensure image is centered */
-            margin: 20px auto; /* Add some margin around the image */
-            width: 300px; 
-            height: 300px; 
-        }
-    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Roxie Events Co.</h1>
-    <p>Coming Soon!</p>
-    <img src="roxieeventsco.png" alt="Roxie Events Co">
-</body>
+    <!-- Home Page -->
+    <home-page>
+        <header class="page-top">
+            <h1>Roxie Events Co.</h1>
+            <p>Crafting Exceptional Event Experiences</p>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-container">
+                <img src="roxieeventsco.png" alt="Roxie Events" class="hero-image" style="max-width: 1200px; height: auto;">
+                <h2>Bring your vision to life</h2>
+                <p>We specialize in creating unforgettable events that exceed your expectations.</p>
+                <button onclick="showContactPage()">Schedule Your Event</button>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <img src="path-to-rose-event2.jpg" alt="Testimonial Card">
+                    <h3>John Smith</h3>
+                    <p>"Roxie Events transformed our corporate event into an incredible experience. Their attention to detail and professionalism made it a seamless process."</p>
+                </div>
+
+                <!-- Repeat similar card structures -->
+            </div>
+        </section>
+
+        <!-- What We Do Section -->
+        <section class="what-we-do" id="services">
+            <div class="what-we-do-container">
+                <h2>Our Services</h2>
+                <div class="service-sections">
+                    <div class="service-card event-planning">
+                        <h3>Event Planning</h3>
+                        <ul>
+                            <li>Creative Conceptualization</li>
+                            <li>Detailed Coordinate Management</li>
+                            <li>Vendor Negotiation</li>
+                            <li>Production Support</li>
+                        </ul>
+                    </div>
+
+                    <!-- Add similar service cards for other services -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h2>Our Work</h2>
+                <div class="gallery-grid">
+                    <!-- Include Before & After galleries for each service -->
+                    <div class="before-after-gallery">
+                        <h3>Before</h3>
+                        <img src="roxieeventsco.png" alt="Event Before Transformation">
+                    </div>
+                    <div class="before-after-gallery">
+                        <h3>After</h3>
+                        <img src="roxieeventsco.png" alt="Event After Transformation">
+                    </div>
+                </div>
+
+                <div class="gallery-slider">
+                    <!-- Implement gallery slider -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <input type="hidden" name="_Requestido__JavaScript enabled" value="on">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="phone" placeholder="Your Phone Number"></textarea>
+                    <select name="subject">
+                        <option value="">Select Category</option>
+                        <!-- Add other options -->
+                    </select>
+                    <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <!-- Call to Action -->
+                <div class="cta-button">
+                    <h3>Ready to Plan Your Event?</h3>
+                    <p>Contact Roxie Events today to bring your vision to life.</p>
+                    <a href="#home" onclick="showHomePage()">Back to Home</a>
+                </div>
+
+                <!-- Roxie's Contact Info -->
+                <div class="contact-info">
+                    <h4>Roxie Events</h4>
+                    <p>+1-801-671-0993</p>
+                    <p>roxieeventsco@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <small>© 2025 Roxie Events Co. All rights reserved.</small>
+        </footer>
+    </body>
 </html>
