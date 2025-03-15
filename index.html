@@ -1,109 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            font-family: 'Snell Roundhand Script', cursive; 
-            text-align: center; /* Center text on the page */
-            background-color: #F5F5F3;
-            background-style:flat;
-            background-type:COLOR;
-        }
-        img {
-            display: block; /* Ensure image is centered */
-            margin: 20px auto; /* Add some margin around the image */
-            width: 300px; 
-            height: 300px; 
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roxie Events Co.</title>
-    
-    <!-- Smooth scrolling -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Roxie Events - Event Planner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5E8D7; /* Beige background from the graphic */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4A7046; /* Dark green from balloons */
+            color: #FFF;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .nav {
+            margin-top: 10px;
+        }
+        .nav a {
+            color: #FFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #4A7046;
+            font-size: 1.8em;
+        }
+        .service {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background-color: #FFD1DC; /* Light pink from balloons */
+            border-radius: 5px;
+            width: 200px;
+        }
+        .service h3 {
+            color: #4A7046;
+            margin: 0;
+        }
+        .service p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #4A7046;
+            color: #FFF;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Home Page -->
-    <home-page>
-        <header class="page-top">
-            <h1>Roxie Events Co.</h1>
-            <p>Your Day, Your Way</p>
-        </header>
+    <header>
+        <div class="logo">Roxie <span style="color: #FFD1DC;">&hearts;</span> Events</div>
+        <p>Event Planner</p>
+        <p>www.roxieeventsco.com | roxieeventsco@gmail.com</p>
+        <div class="nav">
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </header>
 
-        <section class="hero-section">
-            <div class="hero-container">
-                <img src="roxieeventsco.png" alt="Roxie Events" class="hero-image" style="max-width: 1200px; height: auto;">
-                <h2>Bring your vision to life</h2>
-                <p>We specialize in creating unforgettable events that exceed your expectations.</p>
+    <div class="content">
+        <div class="section" id="services">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Grab and Go Garland</h3>
+                <p>Starting at $12/Foot</p>
+                <p>Perfect for quick, elegant decor!</p>
             </div>
-        </section>
-
-        <!-- What We Do Section -->
-        <section class="what-we-do" id="services">
-            <div class="what-we-do-container">
-                <h2>Our Services</h2>
-                <div class="service-sections">
-                    <div class="service-card event-planning">
-                        <h3>Event Planning</h3>
-                        <ul>
-                            <li>Creative Conceptualization</li>
-                            <li>Vendor Negotiation</li>
-                            <li>Production Support including Setup and Teardown</li>
-                        </ul>
-                    </div>
-
-                    <!-- Add similar service cards for other services -->
-                </div>
+            <div class="service">
+                <h3>Classic Garland</h3>
+                <p>Starting at $18/Foot</p>
+                <p>Timeless balloon arrangements.</p>
             </div>
-        </section>
-
-        <!-- Gallery Section -->
-
-        <!-- Contact Section -->
-        <!--
-        <section class="contact-section" id="contact">
-            <div class="contact-container">
-                <h2>Contact Us</h2>
-                <form action="#" method="post">
-                    <input type="hidden" name="_Requestido__JavaScript enabled" value="on"><br>
-                    <input type="text" name="name" placeholder="Your Name" required><br>
-                    <input type="email" name="email" placeholder="Your Email" required><br>
-                    <textarea name="phone" placeholder="Your Phone Number"></textarea><br>
-                    <textarea name="message" placeholder="Your Message" rows="5"></textarea><br>
-                    <button type="submit">Send Message</button><br>
-                </form>
--->
-                <!-- Call to Action -->
-                <div class="cta-button">
-                    <p>Contact Roxie Events today to bring your vision to life.</p>
-                </div>
-
-                <!-- Roxie's Contact Info -->
-                <div class="contact-info">
-                    <h4>Roxie Events Co.</h4>
-                    <p>+1-801-671-6993</p>
-                    <p>roxieeventsco@gmail.com</p>
-                </div>
+            <div class="service">
+                <h3>Trio Customizable Backdrop</h3>
+                <p>Starting at $220</p>
+                <p>Stunning, personalized designs.</p>
             </div>
-        </section>
+            <div class="service">
+                <h3>Full Circle with Frame</h3>
+                <p>Starting at $200</p>
+                <p>A complete circular masterpiece.</p>
+            </div>
+            <div class="service">
+                <h3>Freestanding Arch</h3>
+                <p>Starting at $200</p>
+                <p>Elegant arches for any event.</p>
+            </div>
+            <div class="service">
+                <h3>Balloon Columns</h3>
+                <p>Starting at $50 Each</p>
+                <p>Add height and charm to your venue.</p>
+            </div>
+        </div>
 
-        <!-- Footer -->
-        <footer class="page-footer">
-            <small>© 2025 Roxie Events Co. All rights reserved.</small>
-        </footer>
-    </body>
+        <div class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Let’s create something magical together! Reach out for custom quotes and bookings.</p>
+            <p>Email: roxieeventsco@gmail.com</p>
+            <p>Visit: www.roxieeventsco.com</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Roxie Events. All rights reserved.</p>
+    </footer>
+</body>
 </html>
