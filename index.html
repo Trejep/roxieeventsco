@@ -55,12 +55,20 @@
             color: #4A7046;
             font-size: 1.8em;
         }
-        .section a {
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4A7046;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .button-link:hover {
+            background-color: #FFD1DC;
             color: #000000;
             text-decoration: none;
-        }
-        .section a:hover {
-            text-decoration: underline;
         }
         .service {
             display: inline-block;
@@ -116,7 +124,7 @@
     <div class="content">
         <div class="section" id="services">
             <h2>Our Services</h2>
-            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfDMJoOufLG5XHOyiAfgfxJEpfScEJyoModjfGDhRGvAQmB_g/viewform?usp=header">Bouquet Subscriptions</a></p>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfDMJoOufLG5XHOyiAfgfxJEpfScEJyoModjfGDhRGvAQmB_g/viewform?usp=header" class="button-link">Bouquet Subscriptions</a></p>
             <div class="service">
                 <h3>Grab and Go Garland</h3>
                 <p>Starting at $12/Foot</p>
@@ -154,7 +162,6 @@
             <p>Let’s create something magical together! Reach out for custom quotes and bookings.</p>
             <p>Email: roxieeventsco@gmail.com</p>
             <p>Visit: www.roxieeventsco.com</p>
-            <p>Phone: (801) 671-6993</p>
         </div>
 
         <div class="section" id="gallery">
