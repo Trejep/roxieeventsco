@@ -7,14 +7,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #F5E8D7; /* Beige background from the graphic */
+            background-color: #F5E8D7;
             color: #333;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         header {
-            background-color: #4A7046; /* Dark green from balloons */
+            background-color: #4A7046;
             color: #FFF;
             padding: 20px;
         }
@@ -57,7 +57,7 @@
             display: inline-block;
             margin: 10px;
             padding: 15px;
-            background-color: #FFD1DC; /* Light pink from balloons */
+            background-color: #FFD1DC;
             border-radius: 5px;
             width: 200px;
         }
@@ -68,6 +68,19 @@
         .service p {
             margin: 5px 0;
             font-size: 0.9em;
+        }
+        /* Gallery Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px; /* Rounded edges */
         }
         footer {
             background-color: #4A7046;
@@ -81,7 +94,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Roxie <span style="color: #FFD1DC;">&hearts;</span> Events</div>
+        <div class="logo">Roxie <span style="color: #FFD1DC;">♥</span> Events</div>
         <p>Event Planner</p>
         <p>www.roxieeventsco.com | roxieeventsco@gmail.com | (801) 671-6993</p>
         <div class="nav">
@@ -94,7 +107,7 @@
     <div class="content">
         <div class="section" id="services">
             <h2>Our Services</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDMJoOufLG5XHOyiAfgfxJEpfScEJyoModjfGDhRGvAQmB_g/viewform?usp=header">Bouquet Subscriptions</a>
+            <p href="https://docs.google.com/forms/d/e/1FAIpQLSfDMJoOufLG5XHOyiAfgfxJEpfScEJyoModjfGDhRGvAQmB_g/viewform?usp=header">Bouquet Subscriptions</p>
             <div class="service">
                 <h3>Grab and Go Garland</h3>
                 <p>Starting at $12/Foot</p>
@@ -133,14 +146,29 @@
             <p>Email: roxieeventsco@gmail.com</p>
             <p>Visit: www.roxieeventsco.com</p>
         </div>
-        <div class="section" id="Gallery">
+
+        <div class="section" id="gallery">
             <h2>Gallery</h2>
             <p>A sample of some of our work</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Roxie Events Sign.jpg" alt="Custom Signage">
+                </div>
+                <div class="gallery-item">
+                    <img src="Roxie Events Flowers and Confections.jpg" alt="Flowers and Confections">
+                </div>
+                <div class="gallery-item">
+                    <img src="Roxie Events Confections.jpg" alt="Confections">
+                </div>
+                <div class="gallery-item">
+                    <img src="Roxie Events Ballon Column.jpg" alt="Balloon Columns">
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Roxie Events. All rights reserved.</p>
+        <p>© 2025 Roxie Events. All rights reserved.</p>
     </footer>
 </body>
 </html>
